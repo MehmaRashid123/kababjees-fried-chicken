@@ -1,0 +1,191 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Header Image */
+  .header1 {
+    width: 100%;
+    
+  }
+  .header1 img {
+    
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+  }
+  
+ /* Navbar */
+ .nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -100px;
+    padding: 15px 30px;
+    background-color: #fff;
+    flex-wrap: wrap;
+    
+  }
+
+  /* Left Section (Location + Phone) */
+  .lp {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  /* Location */
+  .location {
+    background-color: red;
+    border-radius: 50px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .location i {
+    color: white;
+    font-size: 18px;
+  }
+  .location a {
+    text-decoration: none;
+    color: white;
+  }
+  .location a h6 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .location a p {
+    margin: 0;
+    font-size: 12px;
+  }
+  
+  /* Phone */
+  .phone{
+    align-items: center;
+    text-align: center;
+  }
+  .phone a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    gap: 8px;
+  }
+  .phone p{
+    color: black;
+  }
+  .phone i {
+    color: red;
+  }
+  .logo img{
+    width: 150px;
+  }
+  .right{
+    display: flex;
+    align-items: center;
+
+  }
+  .submit{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    width: 190px;
+    align-items: center;
+    text-align: center;
+    height: 30px;
+    border-radius: 20px;
+  }
+  .submit a{
+    text-decoration: none;
+    color: white;
+  }
+  .hero {
+    width: 100%;
+  }
+  .hero img {
+    display: block;
+    width: 90%; 
+    margin: 0 auto; 
+    border-radius: 50px;
+  }
+
+  /* round  */
+  .rounds{
+    margin-top: 50px;
+    display: flex;
+    justify-content:space-around ;
+  }
+  .round{
+    width: 110px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: .5rem;
+  }
+  .round p{
+    font-weight: bold;
+  }
+  .rounds :hover{
+    color: red;
+  }
+  .input {
+    position: relative; /* Needed for absolute positioning of the icon */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .input input {
+    width: 80%;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid red;
+    padding-right: 40px; 
+    padding-left: 20px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  .input input :hover {
+    
+    border: 1px solid red;
+    
+  }
+  .input i {
+    position: absolute;
+    right: 12%;
+    font-size: 18px;
+    color: #555;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .popular{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100px;
+    height: 100px;
+    z-index: -2;
+  }
+  .popular img{
+    width: 300px;
+    height: 300px;
+  }
+  .popular p{
+    position: absolute;
+  }
+
+
+  
+  
+  
+  
+  
