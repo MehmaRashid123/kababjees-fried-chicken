@@ -36,7 +36,7 @@ body {
 
   /* round  */
   .rounds{
-   
+   flex-wrap:wrap;
     display: flex;
     justify-content:center ;
     border-radius: 100px;
@@ -454,3 +454,4 @@ body {
   width: auto;
   height: 30px;
 }}
+
