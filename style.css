@@ -1,112 +1,23 @@
-/* Reset & Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  /* Header Image */
-  .header1 {
-    width: 100%;
-    
-  }
-  .header1 img {
-    
-    width: 100%;
-    display: block;
-    margin-bottom: 30px;
-  }
-  
- /* Navbar */
- .nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: -100px;
-    padding: 15px 30px;
-    background-color: #fff;
-    flex-wrap: wrap;
-    
-  }
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url('https://img.freepik.com/free-photo/pine-wood-texture_1194-5373.jpg?semt=ais_hybrid&w=740&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0; 
+  min-height: 100vh; 
 
-  /* Left Section (Location + Phone) */
-  .lp {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-  }
+}
+.nav1{
+  position: sticky;
+}
+.nav1 img{
   
-  /* Location */
-  .location {
-    background-color: red;
-    border-radius: 50px;
-    padding: 8px 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .location i {
-    color: white;
-    font-size: 18px;
-  }
-  .location a {
-    text-decoration: none;
-    color: white;
-  }
-  .location a h6 {
-    margin: 0;
-    font-size: 14px;
-    font-weight: bold;
-  }
-  .location a p {
-    margin: 0;
-    font-size: 12px;
-  }
-  
-  /* Phone */
-  .phone{
-    align-items: center;
-    text-align: center;
-  }
-  .phone a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-weight: bold;
-    gap: 8px;
-  }
-  .phone p{
-    color: black;
-  }
-  .phone i {
-    color: red;
-  }
-  .logo img{
-    width: 150px;
-  }
-  .right{
-    display: flex;
-    align-items: center;
+  width: 100%;
+}
 
-  }
-  .submit{
-    background-color: red;
-    color: white;
-    font-weight: bold;
-    width: 190px;
-    align-items: center;
-    text-align: center;
-    height: 30px;
-    border-radius: 20px;
-  }
-  .submit a{
-    text-decoration: none;
-    color: white;
-  }
-  .hero {
+
+ .hero {
     width: 100%;
   }
   .hero img {
@@ -115,12 +26,21 @@
     margin: 0 auto; 
     border-radius: 50px;
   }
+  @media (max-width: 576px) {
+  .hero img {
+    width: 100%;
+    border-radius: 20px;
+  }
+}
+
 
   /* round  */
   .rounds{
-    margin-top: 50px;
+   
     display: flex;
-    justify-content:space-around ;
+    justify-content:center ;
+    border-radius: 100px;
+    gap: 20px;
   }
   .round{
     width: 110px;
@@ -136,12 +56,34 @@
   .rounds :hover{
     color: red;
   }
-  .input {
+.beverage {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  padding: 80px;
+}
+@media (max-width: 600px) {
+  .beverage {
+    height: 70px;
+  }
+}
+@media (min-width: 601px) and (max-width: 1023px) {
+  .beverage {
+    height: 110px;
+  }
+}
+/* input 
+ */
+ .input {
     position: relative; /* Needed for absolute positioning of the icon */
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .input ::placeholder, :placeholder-shown{
+        color: red;
+
   }
   
   .input input {
@@ -153,6 +95,7 @@
     padding-left: 20px;
     font-size: 16px;
     box-sizing: border-box;
+    
   }
   .input input :hover {
     
@@ -166,26 +109,348 @@
     color: #555;
     cursor: pointer;
     z-index: 2;
+    color: red;
   }
-  .popular{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100px;
-    height: 100px;
-    z-index: -2;
+ /* popular   */
+ .popular {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+
+}
+
+.card-cont {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;  
+  justify-content: center;
+  padding: 20px;
+  flex-wrap:wrap ;
+}
+
+.card1 {
+  width: 300px;
+  margin: 20px;
+}
+
+.card-overlay {
+  position: relative;
+  overflow: hidden; 
+  border-radius: 10px;
+}
+
+.card-overlay img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-overlay h3 {
+  position: absolute;
+  top: 10px; 
+  left: 20px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px black; 
+  z-index: 2;
+}
+
+.card-overlay button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  color: black;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 50px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.card-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(32, 32, 32, 0.2); /* default red tint */
+  border-radius: 10px;
+  z-index: 1;
+  transition: background 0.3s ease-in-out;
+}
+
+.card-overlay:hover::after {
+  background: rgba(255, 125, 125, 0.4);
+}
+
+.card-overlay:hover img {
+  transform: scale(1.1);
+}
+
+.card-overlay h3,
+.card-overlay button {
+  position: absolute;
+  z-index: 2;
+}
+ @media (max-width: 900px) {
+  .card-cont {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
-  .popular img{
-    width: 300px;
-    height: 300px;
-  }
-  .popular p{
-    position: absolute;
-  }
+}
 
 
+/* video  */
+.video{
+  display: flex;
+  justify-content: center;
+}
+.video video{
+  width: 80%;
   
+}
+
+
+/* Cards  */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  justify-items: center;
+  padding: 20px;
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+.card {
+  background: #fff;
+  flex: 1 1 250px;  
+  max-width: 400px;  
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    }
+
+    .card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .card p{
+      color: #000000B3;
+      font-size: 12px;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content h3 {
+      margin: 0;
+      font-size: 20px;
+      color: #333;
+    }
+    .c-b{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .c-b p {
+      font-size: 14px;
+      color: #555;
+      margin: 10px 0;
+    }
+
+    .card-content a {
+      display: inline-block;
+      padding: 8px 12px;
+      background: red;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    @media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+/* paragraph  */
+.para{
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 50px;
+}
+.para h6{
+  color: #4E4949;
+  font-size: 50px;
+  font-weight: lighter;
+
   
-  
-  
-  
+}
+.para p{
+  padding-top: -90px;
+}
+
+/* footer 1  */
+ .Footer1 {
+            background-color: red;
+            width: auto;
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        .kb-logo {
+            width: 180px;
+            height: auto;
+        }
+        
+        .cinfo {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            color: white;
+            gap: 30px;
+            
+        }
+        
+        .info {
+            min-width: 180px;
+        }
+        
+        .info h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .info p {
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .info p:hover {
+            color: #FFD700; 
+        }
+        
+        .mobile img {
+            width: 250px;
+            height: auto;
+            margin-top: -80px;
+        }
+        
+        .Footer1 > div:last-child {
+            text-align: center;
+            color: white;
+        }
+        
+        .Footer1 > div:last-child h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .Footer1 > div:last-child p {
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .Footer1 > div:last-child a {
+            display: inline-block;
+            margin: 5px;
+        }
+        
+        .Footer1 > div:last-child a img {
+            width: 120px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        
+        .Footer1 > div:last-child a img:hover {
+            transform: scale(1.05);
+        }
+        @media (max-width: 1024px) {
+            .Footer1 {
+                justify-content: space-between;
+            }
+            
+            .mobile img {
+                width: 200px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .Footer1 {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+                gap: 25px;
+            }
+            
+            .cinfo {
+                justify-content: center;
+                gap: 25px;
+            }
+            
+            .mobile img {
+                margin-top: 0;
+                width: 180px;
+            }
+            
+            .Footer {
+                padding: 12px 15px;
+                font-size: 14px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .Footer1 {
+                padding: 25px 15px;
+            }
+            
+            .cinfo {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .info {
+                min-width: auto;
+            }}
+/* footer  */
+.Footer{
+  display: flex;
+  font-family: sans-serif;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: #3D3C3C;
+}
+.Footer a{
+
+  color: white;
+}
+.Footer p{
+  font-weight: bold;
+  color: white;
+}
+/* MOBILE  */
+@media (max-width: 600px) 
+{.Footer{
+  font-size: small;
+  width: auto;
+  height: 30px;
+}}
