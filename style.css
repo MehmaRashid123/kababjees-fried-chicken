@@ -15,6 +15,157 @@ body {
   
   width: 100%;
 }
+/* Navbar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #fff;
+  flex-wrap: wrap;
+}
+
+/* Left Section (Location + Phone) */
+.lp {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Location */
+.location {
+  background-color: red;
+  border-radius: 50px;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.location i {
+  color: white;
+  font-size: 18px;
+}
+.location a {
+  text-decoration: none;
+  color: white;
+}
+.location a h6 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+.location a p {
+  margin: 0;
+  font-size: 12px;
+}
+
+/* Phone */
+.phone {
+  align-items: center;
+  text-align: center;
+}
+.phone a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  gap: 8px;
+}
+.phone p {
+  color: black;
+}
+.phone i {
+  color: red;
+}
+
+/* Logo */
+.logo img {
+  width: 150px;
+  max-width: 100%;
+}
+
+/* Right Section */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.submit {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  padding: 5px 15px;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.submit a {
+  text-decoration: none;
+  color: white;
+}
+
+/* ------------------- Responsive ------------------- */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .lp {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .logo img {
+    width: 120px;
+    margin: 0 auto;
+  }
+
+  .right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .submit {
+    font-size: 12px;
+    padding: 5px 10px;
+    width: auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .lp {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .location,
+  .phone {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  .right {
+    justify-content: flex-end;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .submit {
+    display: none; /* Hide complain button on very small screens */
+  }
+}
 
 
  .hero {
@@ -36,7 +187,7 @@ body {
 
   /* round  */
   .rounds{
-   flex-wrap:wrap;
+   flex-wrap: wrap;
     display: flex;
     justify-content:center ;
     border-radius: 100px;
@@ -454,4 +605,3 @@ body {
   width: auto;
   height: 30px;
 }}
-
